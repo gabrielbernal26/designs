@@ -1,0 +1,505 @@
+/* Parámetros Globales de Estilo */
+
+/*Etiquetas de Títulos*/
+h1, h2, h3 { font-family: 'Montserrat', sans-serif;}
+
+/*Etiquetas Subtítulos, Párrafos y Enlaces*/
+h4, h5, h6, p, a { font-family: 'Montserrat', sans-serif;}
+
+/*
+selector {
+    propiedad: valor de propiedad;
+}
+*/
+
+
+
+/* Estilos propios del sitio web */
+aside#menu-cortina {
+    width: 100%;                    /* 100% | =< 300px | < 100% */
+    height: 100%;
+    display: block;
+    margin: 0;
+    float: none;
+    position: fixed;
+    
+    top: 0;
+    right: -100%;                        /* left / right */
+    z-index: 99991;                 /* Menú Cortina va encima de Header */
+    
+    background: #09f;
+}
+
+aside#menu-cortina a#abrir {}
+aside#menu-cortina a#abrir i {}
+aside#menu-cortina a#abrir:hover {}
+aside#menu-cortina a#abrir:hover i {}
+
+aside#menu-cortina a#cerrar {}
+aside#menu-cortina a#cerrar i {}
+aside#menu-cortina a#cerrar:hover {}
+aside#menu-cortina a#cerrar:hover i {}
+
+aside#menu-cortina nav#menu-idiomas-movil {}
+aside#menu-cortina nav#menu-idiomas-movil a {}
+aside#menu-cortina nav#menu-idiomas-movil a:hover {}
+aside#menu-cortina nav#menu-idiomas-movil a#idioma-activo-movil {}
+aside#menu-cortina nav#menu-idiomas-movil span {}
+
+aside#menu-cortina nav#menu-principal-movil {}
+aside#menu-cortina nav#menu-principal-movil a {}
+aside#menu-cortina nav#menu-principal-movil a:hover {}
+
+/* 6 Propiedades del Modelo de Cajas:
+    width       Anchura                         px / % / vw
+    height      Altura                          px / % / vh
+    display     Confirmación de Despliegue      block / none / flex / inline / inline-block
+    margin      Margen                          px / %              top - right - bottom -left
+    float       Flotación                       left / none / right
+    position    Posición                        relative / fixed / absolute / sticky (JS)
+*/
+
+header {
+    width: 100%;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    border-color: solid 3px #333;
+    top: 0;
+    left: 0;
+    z-index: 99990;                     /* -99999 | 0 | 99999 */
+    background: #f0f0f0;                /* Color de fondo */
+}
+
+header article {                        /*Anchura fija:*/
+    width: 1100px;                      /* <= 1200px | <= 75% */
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    
+}
+
+header article a#logo {
+    width: 250px;
+    height: 45px;
+    display: block;
+    margin: 20px 20px 0px 0px;
+    float: left;
+    position: relative;
+    
+    transition: all 0.3s ease-out;   /* Propiedad que varía / Tiempo en segundos / Efecto */
+}
+
+header article a#logo img {
+    width: 150%;
+    height: auto;
+    display: block;
+    margin: auto;
+    float: none;
+    background-image: url(img/logo.svg);
+    position: relative;
+}
+
+header article nav#menu-principal {
+    width: px;
+    height: 47px;
+    display: block;
+    margin: 110px 0 0 0;
+    float: left;
+    position: relative;
+}
+header article nav#menu-principal a {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+    padding: 11px 09px;
+    text-decoration: none;
+    color: #000000;
+    text-align: left;
+ 
+    font-size: 1.08em;
+    line-height: -0em;
+ 
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-principal a:hover {
+    color: rgba(255, 255, 255, 0.068);
+    background: #96959393;
+    border-bottom: solid 3px #333;
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-principal a.activo {
+    color: #323232;
+    background: rgba(43, 25, 0, 0.29);
+    border-bottom: solid 3px #333;
+    transition: all 0.3s ease-out;
+    }
+
+
+
+header article nav#menu-idiomas {
+    width: 103px;
+    height: 30px;
+    display: block;
+    margin: 10px 0 0 0;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+header article nav#menu-idiomas a {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+    padding: 1px 9px;
+    text-decoration: none;
+    color: #cc7901;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.02em;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-idiomas a:hover {
+    color: #333;
+    border-bottom: solid 2px #333;
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-idiomas a#idioma-activo {
+    color: #333;
+    border-bottom: solid 2px #333;
+    transition: all 0.3s ease-out;
+    
+}
+header article nav#menu-idiomas span {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+    font-weight: 800;
+}
+
+
+header article nav#menu-redes-sociales {
+    height: 30px;
+    display: block;
+    margin: 100px 0 0 0;
+    float: right;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: 2;
+    
+}
+header article nav#menu-redes-sociales a {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 3px;
+    float: left;
+    position: relative;
+    padding: 0;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1em;
+    border-radius: 50%;
+    transition: all 0.3s ease-out;
+    
+}
+header article nav#menu-redes-sociales a i {
+   color: black;
+
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-redes-sociales a:hover {
+    
+    transition: all 0.3s ease-out;
+}
+/* red social twitter */
+header article nav#menu-redes-sociales a:hover i {
+    color: #09f;
+        transition: all 0.3s ease-out;
+}
+/* red social instagram */
+header article nav#menu-redes-sociales a:nth-child(2):hover {
+    
+}
+header article nav#menu-redes-sociales a:hover i {
+    -webkit-text-fill-color:( #F63630);
+    border-width: 3px;
+    border-style: solid;
+    
+    border-image: initial;
+    border-radius: 50% 50% 50% 50%; 
+    padding: 6% 9% 6% 9%; 
+        transition: all 0.3s ease-out;  
+   
+}
+/* red social facebook */
+header article nav#menu-redes-sociales a:hover i {
+    color: #3A559F;
+    transition: all 0.3s ease-out;  
+}
+main {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 100px auto 0 auto;
+    float: none;
+    position: relative;
+}
+
+/*CSS de Slider*/
+main section#fila-slider {
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+main section#fila-slider article.slick-inicio {
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+main section#fila-slider article.slick-inicio div.slide {
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+}
+
+main section#fila-slider article.slick-inicio div#slide-01 {
+    
+    text-align: center;   
+    color: rgb(5, 5, 5);
+    position: relative;
+    float: center;
+    background: url("../img/header.png") no-repeat top center; 
+    text-decoration: rgb(252, 252, 252);
+    background-size: cover;
+    
+}
+main section#fila-slider article.slick-inicio div#slide-02 {
+    height: 100%;
+    text-align: center;
+    
+}
+main section#fila-slider article.slick-inicio div#slide-03 {
+    text-align: left;
+    position: relative;
+    float: right;
+    background: url("../img/imagen3.jpg") no-repeat top right;
+    
+}
+
+
+
+main section#fila-slider article.slick-inicio div.slide div#recuadro-blanco {
+    
+   
+ }
+ main section#fila-slider article.slick-inicio div.slide-02 div#recuadro-blanco {
+   
+    
+ }
+
+main section#fila-slider article.slick-inicio div.slide div#recuadro-blanco h1 {}
+main section#fila-slider article.slick-inicio div.slide div#recuadro-blanco h2 {}
+main section#fila-slider article.slick-inicio div.slide div#recuadro-blanco a { }
+main section#fila-slider article.slick-inicio div.slide div#recuadro-blanco a:hover { }
+
+
+
+
+
+
+
+
+
+
+
+
+
+main section#fila-img-instagram {
+    
+}
+main section#fila-img-instagram article {
+    
+}
+main section#fila-img-instagram article a {
+    
+}
+main section#fila-img-instagram article a img {
+    
+}
+main section#fila-img-instagram article a:hover {
+    
+}
+main section#fila-img-instagram article a:hover img {
+    
+}
+
+
+
+
+
+
+main section#fila-img-fondo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+
+}
+main section#fila-img-fondo article {
+    width: 1200px;
+    height: 750px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+main section#fila-img-fondo article h5 {
+    
+}
+main section#fila-img-fondo article p {
+    
+}
+
+
+
+
+main section#fila-degradado-fondo {
+    width: 100%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+    float: center;
+    position: relative;
+    background: url("../img/footer.jpg") no-repeat top fixed;
+    background-size: cover;
+}
+main section#fila-degradado-fondo article {
+    width: 1200px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+main section#fila-degradado-fondo article h5 {
+    color: #fff;
+    margin: 0;
+    font-size: 3.375em;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    font-weight: 700;
+    padding: 100px 0 30px 0;
+}
+main section#fila-degradado-fondo article p {
+    
+}
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    
+    background: #393939;
+}
+
+
+
+
+/* Responsive: */
+/*
+Escritorio      >= 1200px
+Tablets         <= 1199px --- >= 500px
+Móviles         <= 499px --- >= 340px
+
+Media-Queries + Breakpoints
+*/
+
+/* Aplica para el rango 1199px a 1100px */
+@media only screen and (max-width: 1199px){
+    main section#fila-quien-soy {
+        height: auto;
+    }
+    main section#fila-quien-soy article {
+        width: 80%;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 1099px){
+    
+}
+
+@media only screen and (max-width: 999px){
+    
+}
+
+@media only screen and (max-width: 899px){
+    
+}
+
+@media only screen and (max-width: 799px){
+    
+}
+
+@media only screen and (max-width: 699px){
+    
+}
+
+@media only screen and (max-width: 599px){
+    
+}
+
+@media only screen and (max-width: 499px){
+    
+}
+
+@media only screen and (max-width: 449px){
+    
+}
+
+@media only screen and (max-width: 399px){
+    
+}
+
+@media only screen and (max-width: 349px){
+    
+}
